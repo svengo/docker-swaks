@@ -1,6 +1,6 @@
-ARG SWAKS_VERSION=swaks-20170101.0
-
 FROM alpine:latest
+
+ARG SWAKS_VERSION="20170101.0"
 
 RUN \
     apk add --no-cache \
@@ -13,4 +13,4 @@ RUN \
     && mv swaks /usr/bin
 
 WORKDIR /root
-ENTRYPOINT ["/usr/bin/swaks"]
+CMD ["/usr/bin/swaks"]
